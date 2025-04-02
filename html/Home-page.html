@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REC-Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/Home-page-header-home-css.css">
+  <link rel="stylesheet" href="/css/Home-page-css.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head> 
+<body>
+  <header class="header">
+    <div class="upper-section">
+      <img src="/src/logo/logo.png" class="logo-png">
+      <div class="profile-info-section">
+        <div class="profile-photo-container">
+          <img src="/src/profile-photo/profile-photo.jpg" class="profile-photo">
+        </div>
+        <div class="user-name"></div>
+        <div class="user-identifier"></div>
+      </div>
+      <div class="socials-section">
+        <div class="socials-container">
+          <div class="social-media-link">
+            <a><img src="/src/logo/facebook.svg" class="facebook-logo"></a>
+            <a><img src="/src/logo/twitter-circle.svg" class="twitter-logo"></a>
+            <a><img src="/src/logo/youtube-with-circle.svg" class="youtube-logo"></a>
+            <a><img src="/src/logo/instagram-with-circle.svg" class="instagram-logo"></a>
+            <!-- <a><img src="/src/logo/connection-wifi-variant.svg" class="wifi-logo"></a> -->
+          </div>
+          <div class="contact-number">91-44-67181020</div>
+          <div class="email-website-addr">admin@rajalakshmi.edu.in<a href="">www.rajalakshmi.org</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="lower-section">
+      <button class="home-btn"><a href="/html/Home-page.html">Home</a></button>
+      <button class="academic-btn"><a href="/html/Academic-page.html">Academic</a></button>
+      <button class="lms-btn"><a href="/html/Lms-page.html">LMS</a></button>
+      <button class="examination-btn"><a href="/html/Examination-page.html">Examination</a></button>
+    </div>
+    <div class="horizontal-line-container">
+      <div class="horizontal-line"></div>
+    </div>
+  </header>
+  <main>
+
+    <div class="quick-info-container">
+      <div class="cgpa-container">
+        <img src="/src/icons/education.svg" class="cgpa-icon">
+        <div class="cgpa-value">CGPA<br></div>
+      </div>
+      <div class="staff-container">
+        <img src="/src/icons/medical-staff.svg" class="staff-icon">
+        <div class="staff-value">Staff<br></div>
+      </div>
+      <div class="announcement-container">
+        <img src="/src/icons/bell.svg" class="announcement-icon">
+        <div class="announcement-value">Announcement</div>
+      </div>
+      <div class="attendance-container">
+        <img src="/src/icons/power-query-percentage.svg" class="attendance-icon">
+        <div class="attendance-value">Total Attendance 90%</div>
+      </div>
+    </div>
+
+    <!-- home page content -->
+
+    <div class="data-container">
+      <div class="data-left-section">
+          <div class="attendance-table-container">
+            <h2 style="text-align: center; margin-bottom: 10px;">Attendance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Subject</th>
+                        <th>Lectures</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>FOAI - CD1960</td>
+                        <td>11/11</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>GDD - CD19641</td>
+                        <td>10/11</td>
+                        <td>90.9</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>DV - CD19642</td>
+                        <td>10/11</td>
+                        <td>90.9</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>WE - CD19643</td>
+                        <td>10/11</td>
+                        <td>90.9</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>MP - CD19651</td>
+                        <td>10/11</td>
+                        <td>90.9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="chart-container">
+          <canvas id="cgpaChart"></canvas>
+      </div>
+  
+      <script>
+          const ctx = document.getElementById('cgpaChart').getContext('2d');
+  
+          new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+                  datasets: [{
+                      label: 'CGPA',
+                      data: [4, 5.2, 6.3, 7.1, 6.5, 7.2, 7.9, 8.5], // CGPA values
+                      backgroundColor: '#800080', // Purple color
+                      borderRadius: 8, // Rounded edges
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  maintainAspectRatio: false, // Allows vertical resizing
+                  scales: {
+                      x: {
+                          title: {
+                              display: true,
+                              text: 'Semester',
+                              font: { size: 14 }
+                          }
+                      },
+                      y: {
+                          beginAtZero: true,
+                          max: 8, // Max CGPA is 10
+                          title: {
+                              display: true,
+                              text: 'CGPA',
+                              font: { size: 14 }
+                          }
+                      }
+                  },
+                  plugins: {
+                      legend: {
+                          display: false // Hides legend for cleaner UI
+                      }
+                  }
+              }
+          });
+      </script>
+  
+      </div>
+      <div class="data-right-section">
+        <div class="schedule-table-container">
+          <table>
+              <thead>
+                  <tr>
+                      <td class="time-column">Time</td>
+                      <th>Tue</th>
+                      <th>Wed</th>
+                      <th>Thru</th>
+                      <th>Fri</th>
+                      <th>Sat</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="time-column">8:00 AM - 9.00 AM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">9:00 AM - 9:50 AM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">10:10 AM - 11:00 AM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">11:00 AM - 11:50 AM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">12:30 PM - 1:20 PM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">1:20 PM - 2:10 PM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+                  <tr>
+                      <td class="time-column">2:10 PM - 3:00 PM</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                      <td>Time</td>
+                  </tr>
+  
+              </tbody>
+          </table>
+      </div>
+      </div>
+    </div>
+    <div class="syllabus-container">
+      <div class="header-section">
+        <div class="header-title">Semester Subject</div>
+        <select class="drop-down-menu">
+          <!-- <option value="1">&#8544;</option>
+          <option value="2">&#8545;</option>
+          <option value="3">&#8546;</option>
+          <option value="4">&#8547;</option> -->
+          <option value="5">&#8548;</option>
+          <!-- <option value="6">&#8549;</option> -->
+        </select>
+        <div class="search-bar-container">
+          <img class="search-icon" src="/src/icons/search.svg">
+          <input type="text" class="input-field" placeholder="CD19654">
+        </div>
+      </div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Subject</th>
+                  <th>Code</th>
+                  <th>Regulation</th>
+                  <th>Semester</th>
+                  <!-- <th>Edit</th> -->
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <!-- <td class="edit-icons">
+                      <a href="#">&#9998;</a>
+                      <a href="#">&#128190;</a>
+                      <a href="#">&#128465;</a>
+                  </td> -->
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <!-- <td class="edit-icons">
+                      <a href="#">&#9998;</a>
+                      <a href="#">&#128190;</a>
+                      <a href="#">&#128465;</a>
+                  </td> -->
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <!-- <td class="edit-icons">
+                      <a href="#">&#9998;</a>
+                      <a href="#">&#128190;</a>
+                      <a href="#">&#128465;</a>
+                  </td> -->
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <!-- <td class="edit-icons">
+                      <a href="#">&#9998;</a>
+                      <a href="#">&#128190;</a>
+                      <a href="#">&#128465;</a>
+                  </td> -->
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </main>
+  <script>
+    // DOM Elements
+    const elements = {
+      userName: document.querySelector('.user-name'),
+      userIdentifier: document.querySelector('.user-identifier'),
+      profilePhoto: document.querySelector('.profile-photo'),
+      cgpaValue: document.querySelector('.cgpa-value'),
+      staffValue: document.querySelector('.staff-value'),
+      announcementValue: document.querySelector('.announcement-value'),
+      attendanceValue: document.querySelector('.attendance-value'),
+      attendanceTable: document.querySelector('.attendance-table-container tbody'),
+      scheduleTable: document.querySelector('.schedule-table-container tbody'),
+      subjectsTable: document.querySelector('.syllabus-container tbody'),
+      contactNumber: document.querySelector('.contact-number'),
+      emailWebsite: document.querySelector('.email-website-addr'),
+      cgpaChart: document.getElementById('cgpaChart')
+    };
+  
+    // Fetch student data
+    async function fetchStudentData() {
+      try {
+        const response = await fetch('http://localhost:3001/api/student/2116221701059');
+        if (!response.ok) throw new Error('Network response was not ok');
+        return await response.json();
+      } catch (error) {
+        console.error('Error fetching student data:', error);
+        return null;
+      }
+    }
+  
+    // Update profile section
+    function updateProfile(student) {
+      elements.userName.textContent = student.name;
+      elements.userIdentifier.textContent = student.identifier;
+      elements.profilePhoto.src = student.profilePhoto;
+    }
+  
+    // Update quick info cards
+    function updateQuickInfo(student) {
+      elements.cgpaValue.innerHTML = `CGPA<br>${student.cgpa}`;
+      elements.staffValue.innerHTML = `Staff<br>${student.staffCount}`;
+      elements.announcementValue.textContent = student.announcement;
+      elements.attendanceValue.textContent = `Total Attendance ${student.totalAttendance}%`;
+    }
+  
+    // Update attendance table
+    function updateAttendanceTable(attendance) {
+      elements.attendanceTable.innerHTML = attendance.map(subject => `
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>${subject.subject}</td>
+          <td>${subject.attended}/${subject.total}</td>
+          <td>${subject.percentage}</td>
+        </tr>
+      `).join('');
+    }
+  
+    // Update schedule table
+    function updateScheduleTable(schedule) {
+      elements.scheduleTable.innerHTML = schedule.timeSlots.map(slot => `
+        <tr>
+          <td class="time-column">${slot.time}</td>
+          ${slot.subjects.map(subj => `<td>${subj}</td>`).join('')}
+        </tr>
+      `).join('');
+    }
+  
+    // Update subjects table
+    function updateSubjectsTable(subjects) {
+      if (!subjects || subjects.length === 0) {
+        elements.subjectsTable.innerHTML = `
+          <tr>
+            <td colspan="6" style="text-align: center;">No subjects found</td>
+          </tr>
+        `;
+        return;
+      }
+  
+      elements.subjectsTable.innerHTML = subjects.map(subject => `
+        <tr>
+          <td>${subject.name || 'N/A'}</td>
+          <td>${subject.subjectName || 'N/A'}</td>
+          <td>${subject.code || 'N/A'}</td>
+          <td>${subject.regulation || 'N/A'}</td>
+          <td>${subject.semester || 'N/A'}</td>
+        </tr>
+      `).join('');
+  
+      // Add event listeners for edit buttons
+      document.querySelectorAll('.edit-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const code = e.target.getAttribute('data-id');
+          console.log(`Edit subject with code: ${code}`);
+          // Implement edit functionality here
+        });
+      });
+    }
+  
+    // Update contact info
+    function updateContactInfo(contact) {
+      elements.contactNumber.textContent = contact.phone;
+      elements.emailWebsite.innerHTML = `
+        ${contact.email} <a href="https://${contact.website}">${contact.website}</a>
+      `;
+    }
+  
+    // Update CGPA chart
+    function updateCgpaChart(cgpaHistory) {
+      if (window.cgpaChart) {
+        window.cgpaChart.destroy();
+      }
+      
+      window.cgpaChart = new Chart(elements.cgpaChart, {
+        type: 'bar',
+        data: {
+          labels: cgpaHistory.map((_, i) => (i + 1).toString()),
+          datasets: [{
+            label: 'CGPA',
+            data: cgpaHistory,
+            backgroundColor: '#800080',
+            borderRadius: 8,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Semester',
+                font: { size: 14 }
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 10,
+              title: {
+                display: true,
+                text: 'CGPA',
+                font: { size: 14 }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+  
+    // Main function to load and display all data
+    async function loadStudentData() {
+      const student = await fetchStudentData();
+      if (!student) {
+        console.error('Failed to load student data');
+        return;
+      }
+  
+      updateProfile(student);
+      updateQuickInfo(student);
+      updateAttendanceTable(student.attendance);
+      updateScheduleTable(student.schedule);
+      updateSubjectsTable(student.subjects);
+      updateContactInfo(student.contact);
+      updateCgpaChart(student.cgpaHistory);
+    }
+  
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', loadStudentData);
+  </script>
+</body>
+</html>

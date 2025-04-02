@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Login</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/login-page-css.css">
+</head>
+<body>
+  <main class="main-flex-box">
+    <div class="image-slider-container">
+      <div class="wrapper">
+        <img src="/src/login-banner/login-banner-1.jpg">
+        <img src="/src/login-banner/login-banner-2.jpg">
+        <img src="/src/login-banner/login-banner-3.jpg">
+        <img src="/src/login-banner/login-banner-4.jpg">
+        <img src="/src/login-banner/login-banner-5.jpg">
+        <img src="/src/login-banner/login-banner-6.jpg">
+      </div>
+    </div>
+    <div class="login-section">
+      <img src="/src/logo/logo.png" class="college-logo" alt="image of college logo">
+      <div class="login-page-title">Enterprise Resource Planning Login</div>
+      <div class="login-container">
+        <div class="login-nav-header">
+          <button class="sign-up-btn">Sign in</button>
+          <button class="forgot-password-btn"><a href="/html/Login-page-forgot-password.html">Forgot passowrd</a></button>
+        </div>
+        <div class="input-field-container">
+          <input type="text" placeholder="username" id="rollno" class="username-field">
+          <input type="password" placeholder="password" id="password" class="password-field">
+        </div>
+        <div class="login-btn-container">
+          <button class="login-btn" onclick="validateLogin()">Sign in</button>
+          <p class="error" id="error-message">Invalid Roll No or Password</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    function validateLogin() {
+        let rollNo = document.getElementById("rollno").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let errorMessage = document.getElementById("error-message");
+
+        // Hardcoded credentials for validation
+        const validUsers = {
+            "12345": "password123",
+            "67890": "mypassword"
+        };
+
+        if (rollNo === "" || password === "") {
+            errorMessage.textContent = "Fields cannot be empty";
+            errorMessage.style.visibility = "visible"; // Show error without shifting
+            return;
+        }
+
+        if (validUsers[rollNo] && validUsers[rollNo] === password) {
+            alert("Login Successful!");
+            window.location.href = "Home-page.html"; // Redirect after login
+        } else {
+            errorMessage.textContent = "Invalid Roll No or Password";
+            errorMessage.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>

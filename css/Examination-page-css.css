@@ -1,0 +1,62 @@
+main {
+  padding: 0px 25px 0px 25px;
+}
+
+.exam-container {
+  background: white;
+  /* padding: 20px; */
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.exam-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.exam-header .dropdown,.exam-header .search-box {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #D1D5DB;
+}
+
+
+.exam-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-container th,.exam-container td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.exam-container th {
+  font-weight: bold;
+  color: #555;
+}
+
+.exam-container td i {
+  cursor: pointer;
+  margin-right: 8px;
+  color: #555;
+}
+
+.exam-container .table-heading {
+  background-color: #810081;
+  color: #ffffff;
+}
+
+.container-heading {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}

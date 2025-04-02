@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .table-container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: #800080; /* Purple header */
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: purple;
+        }
+
+        @media (max-width: 500px) {
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h2 style="text-align: center; margin-bottom: 10px;">Attendance</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Subject</th>
+                    <th>Lectures</th>
+                    <th>%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>FOAI - CD1960</td>
+                    <td>11/11</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>GDD - CD19641</td>
+                    <td>10/11</td>
+                    <td>90.9</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>DV - CD19642</td>
+                    <td>10/11</td>
+                    <td>90.9</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>WE - CD19643</td>
+                    <td>10/11</td>
+                    <td>90.9</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>MP - CD19651</td>
+                    <td>10/11</td>
+                    <td>90.9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

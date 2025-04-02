@@ -1,0 +1,305 @@
+main {
+  padding: 0px 25px 0px 25px;
+}
+
+.quick-info-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid lightgrey;
+  padding: 20px 0px 20px 0px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+
+.cgpa-container,
+.staff-container,
+.announcement-container,
+.attendance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 20px;
+  box-shadow: -1px 1px 5px 3px rgba(149, 42, 149, 0.5);
+  transition: width 0.15s, height 0.15s, box-shadow 0.15s;
+}
+
+.cgpa-container:hover,
+.staff-container:hover,
+.announcement-container:hover,
+.attendance-container:hover {
+  width: 208px;
+  height: 65px;
+  box-shadow: -1px 1px 5px 3px rgba(53, 59, 121, 0.5);
+}
+
+.cgpa-icon,
+.staff-icon,
+.announcement-icon,
+.attendance-icon {
+  height: 35px;
+  padding-left: 5px;
+}
+
+.cgpa-value,
+.staff-value,
+.announcement-value,
+.attendance-value {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.data-container {
+  display: flex;
+}
+
+.data-left-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.data-right-section {
+  flex: 1;
+}
+
+/* attendance table */
+
+.attendance-table-container {
+  width: 100%;
+  /* max-width: 600px; */
+  background: white;
+  /* padding: 15px; */
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.attendance-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.attendance-table-container th {
+  background-color: #800080; /* Purple header */
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.attendance-table-container td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+.attendance-table-container tr:last-child td {
+  border-bottom: none;
+}
+
+.attendance-table-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: purple;
+}
+
+@media (max-width: 500px) {
+  th, td {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
+
+
+/* schedule table  */
+
+.schedule-table-container {
+  width: 100%;
+  /* max-width: 900px; */
+  height: 140vh;
+  background: white;
+  /* padding: 15px; */
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-table-container table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.schedule-table-container th {
+  background-color: #800080; /* Purple */
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+}
+
+.schedule-table-container td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Time Column (Left) */
+.schedule-table-container .time-column {
+  background: #800080;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  writing-mode: horizontal-tb;
+}
+
+/* First Row (Header) Styling */
+.schedule-table-container th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.schedule-table-container th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* Responsive Table */
+@media (max-width: 500px) {
+.schedule-table-container th, .schedule-table-container td {
+      padding: 8px;
+      font-size: 12px;
+  }
+}
+
+/* bar graph  */
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  height: 90vh; /* Makes it responsive vertically */
+  background: white;
+  /* padding: 20px; */
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+      height: 60vh; /* Adjust height for smaller screens */
+  }
+}
+
+/* syllabus container */
+
+.syllabus-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  background: #fff;
+  /* padding: 20px; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* overflow-x: auto; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header-section {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search-bar-container {
+flex: 1;
+padding-left: 10px;
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.drop-down-menu {
+border: 1px solid lightgrey;
+padding: 4px;
+margin-left: 20px;
+font-family: "Open Sans", sans-serif;
+font-weight: 500;
+border-radius: 5px;
+color: #2E4765;
+background-color: #D1D5DB;
+}
+.syllabus-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.syllabus-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.syllabus-container th, 
+.syllabus-container td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+.syllabus-container th {
+  background-color: #800080;
+  color: #ffffff;
+}
+.edit-icons {
+  display: flex;
+  gap: 10px;
+}
+.edit-icons a {
+  text-decoration: none;
+  color: #555;
+  font-size: 18px;
+}
+.edit-icons a:hover {
+  color: #000;
+}
+
+.syllabus-container .input-field {
+border: 1px solid lightgrey;
+padding: 5px;
+background-color: #D1D5DB;
+/* width: 80px; */
+padding-left: 40px;
+border-radius: 5px;
+}
+
+.header-section input::placeholder {
+font-family: "Open Sans", sans-serif;
+font-weight: 400;
+color: #2E4765;
+font-size: 12px;
+}
+
+.search-icon {
+height: 22px;
+position: absolute;
+left: 15px;
+}
+

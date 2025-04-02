@@ -1,0 +1,167 @@
+main {
+  padding: 0px 25px 0px 25px;
+}
+
+.quick-info-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid lightgrey;
+  padding: 20px 0px 20px 0px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  position: fixed;
+  left: 25px;
+  right: 25px;
+  top: 225px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.student-details-container,
+.qualification-container,
+.result-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  height: 60px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 20px;
+  box-shadow: -1px 1px 5px 3px rgba(149, 42, 149, 0.5);
+}
+
+.student-details-container,
+.qualification-container,
+.result-container {
+  transition: width 0.15s, height 0.15s, box-shadow 0.15s;
+}
+
+.student-details-container:hover,
+.qualification-container:hover,
+.result-container:hover {
+  width: 308px;
+  height: 65px;
+  box-shadow: -1px 1px 5px 3px rgba(53, 59, 121, 0.5);
+}
+
+.student-details-container a,
+.qualification-container a,
+.result-container a {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+}
+
+.cgpa-icon,
+.staff-icon,
+.announcement-icon,
+.attendance-icon {
+  height: 35px;
+  padding-left: 5px;
+}
+
+.student-details-value,
+.qualification-value,
+.result-value{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.data-container {
+  display: flex;
+}
+
+.data-left-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.data-right-section {
+  flex: 1;
+}
+
+.student-details-page,
+.qualification-details-page,
+.result-details-page {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 150px 12px 150px;
+  border-radius: 5px;
+  margin-top: 12px;
+  box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px 0px 20px;
+  border-bottom: 0.6px solid #000000;
+}
+
+.result-details-section,
+.result-details-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px 0px 20px;
+  border-bottom: 0.6px solid #000000;
+}
+
+.result-details-heading {
+  font-size: 17px;
+}
+
+.student-details-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: #676B84;
+  font-weight: 600;
+}
+
+.detail-title,
+.semester {
+  color: #676B84;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.detail-value {
+  text-align-last: right;
+  color: #810081d4;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.text-highlight {
+  color: green;
+}
+
+.text-underline {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.semester-heading,
+.course-title,
+.grade-value {
+  color: #810081d4;
+  font-weight: 500;
+}
+
+.grade-value {
+  text-align-last: right;
+}
+
+.line-break {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #6a0075;
+            color: white;
+        }
+        .submit-button {
+            background: #5a5a75;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .history {
+            background: #d3d3d3;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .icon {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .icon.check {
+            color: purple;
+        }
+        .icon.cross {
+            color: red;
+        }
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>SUBJECT</th>
+                    <th>A-NO</th>
+                    <th>DUE-DATE</th>
+                    <th>SUBMIT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GDD - CD19641</td>
+                    <td>1</td>
+                    <td>28/2/2025</td>
+                    <td class="icon">📄</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="submit-button">SUBMIT</div>
+    <div class="history">SUBMISSION HISTORY</div>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <tr>
+                    <td>GDD - CD19641</td>
+                    <td>1</td>
+                    <td>28/2/2025</td>
+                    <td class="icon check">✔</td>
+                </tr>
+                <tr>
+                    <td>GDD - CD19641</td>
+                    <td>2</td>
+                    <td>28/2/2025</td>
+                    <td class="icon cross">✖</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
