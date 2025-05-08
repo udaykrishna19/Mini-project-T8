@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REC-Feedback</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/Home-page-header-feedback-css.css">
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/Feedback-page-css.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="upper-section">
+      <img src="/src/logo/logo.png" class="logo-png">
+      <div class="profile-info-section">
+        <div class="profile-photo-container">
+          <img src="/src/profile-photo/profile-photo.jpg" class="profile-photo">
+        </div>
+        <div class="user-name">UDAY KIRAN K</div>
+        <div class="user-identifier">2116221701059</div>
+      </div>
+      <div class="socials-section">
+        <div class="socials-container">
+          <div class="social-media-link">
+            <a><img src="/src/logo/facebook.svg" class="facebook-logo"></a>
+            <a><img src="/src/logo/twitter-circle.svg" class="twitter-logo"></a>
+            <a><img src="/src/logo/youtube-with-circle.svg" class="youtube-logo"></a>
+            <a><img src="/src/logo/instagram-with-circle.svg" class="instagram-logo"></a>
+            <!-- <a><img src="/src/logo/connection-wifi-variant.svg" class="wifi-logo"></a> -->
+          </div>
+          <div class="contact-number">91-44-68181020</div>
+          <div class="email-website-addr">admin@rajalakshmi.edu.in <a href="">www.rajalakshmi.org</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="lower-section">
+      <button class="home-btn"><a href="/html/Home-page.html">Home</a></button>
+      <button class="academic-btn"><a href="/html/Academic-page.html">Academic</a></button>
+      <button class="lms-btn"><a href="/html/Lms-page.html">LMS</a></button>
+      <button class="examination-btn"><a href="/html/Examination-page.html">Examination</a></button>
+      <button class="feedback-btn"><a href="/html/Feedback-page.html">Feedback Form</a></button>
+    </div>
+    <div class="horizontal-line-container">
+      <div class="horizontal-line"></div>
+    </div>
+  </header>
+  <main>
+    <div class="feedback-container">
+      <div class="feedback-header">
+        <h2>College Feedback Form</h2>
+        <p>We value your feedback. Please share your suggestions, complaints, or appreciation.</p>
+      </div>
+  
+      <form class="feedback-form" id="feedbackForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="feedbackType">Type of Feedback *</label>
+            <select id="feedbackType" name="feedbackType" required>
+              <option value="" disabled selected>Select feedback type</option>
+              <option value="complaint">Complaint</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="appreciation">Appreciation</option>
+              <option value="general">General Feedback</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="academics">Academics</option>
+              <option value="hostel">Hostel Facilities</option>
+              <option value="transport">Transport</option>
+              <option value="canteen">Canteen</option>
+              <option value="library">Library</option>
+              <option value="sports">Sports Facilities</option>
+              <option value="administration">Administration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Are you a *</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="hosteller" name="studentType" value="hosteller" checked>
+              <label for="hosteller">Hosteller</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="dayScholar" name="studentType" value="dayScholar">
+              <label for="dayScholar">Day Scholar</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Urgency Level</label>
+          <div class="urgency-selector">
+            <div class="urgency-option">
+              <input type="radio" id="low" name="urgency" value="low" checked>
+              <label class="urgency-label" for="low">Low</label>
+            </div>
+            <div class="urgency-option">
+              <input type="radio" id="medium" name="urgency" value="medium">
+              <label class="urgency-label" for="medium">Medium</label>
+            </div>
+            <div class="urgency-option">
+              <input type="radio" id="high" name="urgency" value="high">
+              <label class="urgency-label" for="high">High</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="Brief summary of your feedback" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Detailed Description *</label>
+          <textarea id="description" name="description" placeholder="Please provide detailed information about your feedback..." required></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label>Would you like to be contacted about this feedback?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="contactYes" name="contactBack" value="yes">
+              <label for="contactYes">Yes</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="contactNo" name="contactBack" value="no" checked>
+              <label for="contactNo">No</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Preferred Contact Method (if yes)</label>
+          <div class="checkbox-group">
+            <div class="checkbox-option">
+              <input type="checkbox" id="emailContact" name="contactMethod" value="email">
+              <label for="emailContact">Email</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="phoneContact" name="contactMethod" value="phone">
+              <label for="phoneContact">Phone</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="inPerson" name="contactMethod" value="inPerson">
+              <label for="inPerson">In-person Meeting</label>
+            </div>
+          </div>
+        </div>
+  
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+  
+        <div class="form-footer">
+          <p>Your feedback helps us improve our services. We appreciate your time.</p>
+          <p>Note: * indicates required fields</p>
+        </div>
+      </form>
+    </div>
+  
+    <script>
+      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const feedbackData = Object.fromEntries(formData.entries());
+        
+        // Add student identification from your system (you'll need to implement this)
+        // feedbackData.studentId = getCurrentStudentId(); // Implement this function
+        // feedbackData.studentName = getCurrentStudentName(); // Implement this function
+        
+        // Here you would typically send the data to your backend
+        console.log('Feedback data:', feedbackData);
+        
+        // Example fetch request (uncomment and modify as needed)
+        /*
+        fetch('/api/feedback', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(feedbackData),
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert('Feedback submitted successfully!');
+          this.reset();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error submitting your feedback.');
+        });
+        */
+        
+        // For now, just show a success message
+        alert('Feedback submitted successfully!');
+        this.reset();
+      });
+    </script>
+  </main>
+</body>
+</html>

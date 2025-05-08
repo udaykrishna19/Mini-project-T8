@@ -156,40 +156,40 @@ body {
   /* background-color: rgb(249, 249, 249); */
 }
 
-.lms-btn,
-.academic-btn,
 .home-btn,
+.academic-btn,
+.lms-btn,
 .examination-btn {
   margin-right: 1px;
 }
 
-.lms-btn,
+.examination-btn,
 .academic-btn,
-.home-btn,
-.feedback-btn {
+.lms-btn,
+.home-btn {
   /* background-color: rgb(244, 239, 239); */
   color: #000000;
   transition: background-color 0.15s;
 }
 
-.lms-btn:hover,
+.examination-btn:hover,
 .academic-btn:hover,
-.home-btn:hover,
-.feedback-btn:hover {
+.lms-btn:hover,
+.home-btn:hover {
   background-color: lightgrey;
 }
 
-.examination-btn {
+.feedback-btn {
   background-color: #810081;
   transition: background-color 0.15s;
   box-shadow: -1px 1px 6px 2px rgba(0, 0, 0, 0.25);
 }
 
-.examination-btn a {
+.feedback-btn a {
   color: #ffffff;
 }
 
-.examination-btn:hover {
+.feedback-btn:hover {
   background-color: #810081d4;
 }
 
